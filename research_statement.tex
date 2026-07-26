@@ -1,12 +1,12 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
-\usepackage[margin=0.9in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{3pt}
-\renewcommand{\baselinestretch}{0.95}
+\renewcommand{\baselinestretch}{0.96}
 
 \title{\textbf{Deep Learning for Galaxy Spectral Super-Resolution}}
 \author{Aryana Haghjoo}
@@ -18,21 +18,19 @@
 
 \vspace{-0.4cm}
 
-Low-resolution spectroscopy from JWST and the Nancy Grace Roman Space Telescope can observe large galaxy samples, but spectral features encoding key physics are blurred below instrumental resolution. I develop physics-informed deep learning frameworks that super-resolve low-resolution spectra by $\sim 10\times$, recovering hidden astrophysical information.
+Modern infrared telescopes like JWST and Nancy Grace Roman enable cosmic observations, but efficient spectroscopic modes operate at low resolution: JWST's NIRSpec prism ($R \sim 100$) and Roman's grism. Spectral features encoding critical physics blur below instrumental limits. I develop physics-informed deep learning frameworks that super-resolve low-resolution galaxy spectra by $\sim 10\times$, recovering hidden astrophysical information.
 
-Using paired JWST/NIRSpec observations from the public JADES survey (same galaxies in high-resolution grating and low-resolution prism modes), I train generative models with physics-informed loss functions targeting emission line accuracy. Figure 1(a) demonstrates super-resolution on a $z=7.43$ galaxy, recovering spectral features invisible in prism data. Figure 1(b) shows the astrophysical impact: Lyman-alpha profiles depend sensitively on ionized bubble size ($R_b$). High-resolution profiles are distinguishable; prism-resolution profiles appear identical. Our method recovers this information, enabling physical measurements from low-resolution data.
+Using paired JWST/NIRSpec observations from JADES (same galaxies in high-resolution and prism modes), I train generative models with physics-informed loss functions enforcing accurate emission line ratios. Figure 1(a) demonstrates super-resolution on a $z=7.43$ galaxy, recovering features invisible in prism data. Figure 1(b) shows the astrophysical impact: Lyman-alpha profiles encode ionized bubble sizes ($R_b$) around galaxies. High-resolution profiles are distinguishable; prism-resolution profiles appear identical. Our method recovers this hidden information, enabling physical measurements from scientifically limited data.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.95\textwidth]{figure1.pdf}
+\includegraphics[width=0.90\textwidth]{figure1.pdf}
 \vspace{-0.3cm}
 \end{figure}
 
-\vspace{-0.15cm}
-
 \noindent
-\textbf{Summer 2027 at IPAC:} In-person collaboration with Dr. Hemmati is essential. The fellowship will enable: (1) systematic validation of astrophysical diagnostic recovery using held-out JADES observations; (2) adaptation to Roman grism spectroscopy with IPAC's mission team; (3) development of multi-modal models integrating photometric and spectroscopic data. Direct access to IPAC's computational resources, mission specialists, and collaborators on related surveys accelerates model iteration and ensures our methodology leverages mission-specific characteristics. This immersive environment will significantly advance both research progress and quality compared to remote collaboration.
+\textbf{Summer 2027 at IPAC:} The fellowship focuses on four integrated components: (1) validating recovery of astrophysical diagnostics using held-out JADES data; (2) adapting the framework to Roman grism with IPAC's mission team; (3) developing multi-modal models integrating photometric and spectroscopic information; (4) extending methodology to Euclid spectroscopy. The timing is critical: Roman's first data release is expected Summer 2027. On-site access to real mission data and Dr. Shoubaneh Hemmati—active member of Euclid and Roman missions—enables immediate validation and adaptation impossible remotely. In-person collaboration ensures our methodology aligns with actual mission requirements and delivers forecasts to inform survey strategy.
 
-The work advances my dissertation, produces open-source software and trained models, and develops transferable methodology for future spectroscopic surveys.
+This work advances galaxy astrophysics and demonstrates how machine learning extracts maximum value from observational data. Open-source code, pre-trained models, and value-added catalogs will enable researchers to apply spectral super-resolution across datasets, extending the science reach of JWST, Roman, Euclid, and future missions.
 
 \end{document}
