@@ -14,7 +14,7 @@ Dr. Hemmati is not simply an advisor—she is an active member of the Euclid and
 - **Euclid integration:** Adapting methodology for upcoming Euclid spectroscopy, leveraging Dr. Hemmati's mission expertise
 
 **Why In-Person is Non-Negotiable:**
-Mission instrument development and survey forecasting require rapid iteration impossible via email. Model architecture decisions, loss function adjustments, and Roman specification updates must be discussed face-to-face with Dr. Hemmati and mission team members. Quick decisions that take hours in person require weeks remotely. Being embedded at IPAC ensures our methodology remains aligned with evolving mission requirements and delivers actionable forecasts before Roman survey data release.
+The timing is critical: the first data release from the Roman Space Telescope is expected in Summer 2027—precisely when this fellowship would occur. Being embedded at IPAC during this pivotal moment enables immediate access to Roman data and mission team expertise. Model architecture decisions, loss function adjustments, and real-time adaptation to actual Roman data characteristics must be discussed face-to-face with Dr. Hemmati and mission team members. Quick decisions that take hours in person require weeks remotely. Only by being on-site can we validate our methodology against real Roman data immediately upon release and deliver forecasts that inform the mission's survey strategy.
 
 **Career and Research Impact:**
 Working directly with a mission scientist accelerates research quality and prepares me for future roles combining research with mission operations at institutions like STScI.
