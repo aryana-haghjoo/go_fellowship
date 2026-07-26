@@ -32,7 +32,7 @@ The Graduate Off-Campus Fellowship will support in-person research at IPAC from 
 
 - **Develop Roman Space Telescope adaptations** of the spectral super-resolution pipeline. I will work with IPAC's Roman mission team to integrate grism-specific instrumental characteristics into our framework and produce forecasts for Roman survey science. This work prepares the methodology for the Roman era and contributes to my second dissertation chapter.
 
-- **Integrate collaboration on multi-modal inference**, extending our spectroscopic models to incorporate photometric information, enabling cross-modal learning that will be essential for future survey-scale applications.
+- **Incorporate photometric information into Roman redshift prediction**, where combining photometry with the low-resolution grism spectra helps constrain redshifts that the spectra alone cannot pin down.
 
 **Fall 2027 – Spring 2028: Extended Research Phase**
 Following the fellowship, I will return to UCR and continue research activities with remote collaboration with Dr. Hemmati and IPAC collaborators. This period focuses on:
@@ -57,7 +57,7 @@ I anticipate completing my dissertation and defending by **September 2028** (tar
 After the defense, I will focus on finalizing publications, including:
 - Manuscript 2: Benchmarking deep learning against classical methods
 - Manuscript 3: Roman grism methodology and forecasts
-- Community software releases on GitHub and Hugging Face
+- Public release of all research products—code, trained models, and super-resolved spectra—on GitHub and Hugging Face, with proper documentation so the community can use them
 
 This structure ensures that the summer 2027 fellowship enables intensive, focused research that directly feeds into my dissertation chapters, with a clear path to timely defense and publication.
 
