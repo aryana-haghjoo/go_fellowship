@@ -2,23 +2,22 @@
 
 ## Off-Campus Work Justification (300 words)
 
-The proposed research is a multi-faceted, mission-critical project that integrates four complementary research components: two spectral super-resolution projects (generative model development and benchmarking against classical methods), Roman Space Telescope grism adaptation, and Lyman-alpha physics inference. This integrated scope requires sustained, intensive in-person collaboration at IPAC with Dr. Shoubaneh Hemmati and direct engagement with the Roman mission team—impossible to achieve remotely.
+The proposed research is a multi-faceted, mission-critical project integrating four complementary components: two spectral super-resolution projects (model development and benchmarking), Roman Space Telescope grism adaptation, and Lyman-alpha physics inference. This work requires sustained, intensive in-person collaboration at IPAC with Dr. Shoubaneh Hemmati—a mission scientist actively involved in both the Euclid and Roman Space Telescope missions—and direct engagement with the Roman mission operations team. Such collaboration cannot be achieved remotely.
 
-**Why IPAC is Essential:**
-IPAC is the only location where all necessary resources and expertise converge. As the Infrared Processing and Analysis Center and Roman mission operations hub, IPAC provides: (1) direct access to Roman team members responsible for grism design, calibration, and survey planning; (2) computational infrastructure optimized for JWST and Roman spectral data processing; (3) collaborators on related surveys (JADES, COSMOS-Web) with mission data and expertise. Remote collaboration cannot provide the in-person contact with the Roman team that this project demands.
+**Why Dr. Hemmati and IPAC are Irreplaceable:**
+Dr. Hemmati is not simply an advisor—she is an active member of the Euclid and Roman mission teams at IPAC. Her position provides direct access to mission specifications, instrumental constraints, and mission planning that are essential for developing methods fit for actual survey operations. Remote collaboration cannot substitute for being in the same location as a mission scientist who knows the instruments intimately and can provide immediate guidance on how our spectral super-resolution framework must be adapted to each mission's specific capabilities.
 
-**Integrated Research Activities:**
-The four project components require coordinated development: 
-- **Super-resolution models (JWST):** In-person iteration with Dr. Hemmati on physics-informed loss functions and validation against held-out JADES data
-- **Classical benchmarking:** Real-time comparison of deep learning vs. traditional deconvolution methods
-- **Roman adaptation:** Direct collaboration with IPAC's Roman team to integrate mission-specific instrument characteristics (detector properties, wavelength coverage, grism response) into our framework
-- **Lyman-alpha inference:** Working with mission specialists to ensure our recovered spectral features enable physical parameter estimation
+**Integrated Research Activities Requiring In-Person Collaboration:**
+- **JWST super-resolution development:** Real-time iteration with Dr. Hemmati on physics-informed loss functions, troubleshooting model failures, and validating against JADES data
+- **Classical benchmarking:** Immediate feedback on deep learning vs. traditional method comparisons
+- **Roman grism adaptation:** Direct consultation with Dr. Hemmati on mission-specific design decisions; coordination with the Roman mission team on detector properties, wavelength coverage, and grism response functions
+- **Euclid integration:** Adapting methodology for upcoming Euclid spectroscopy, leveraging Dr. Hemmati's mission expertise
 
-**Why In-Person Collaboration is Non-Negotiable:**
-Troubleshooting model failures, interpreting complex spectral results, and iterating on Roman-specific adaptations require immediate feedback and real-time interaction. Quick decisions during model development—changing loss functions, adjusting architectures based on Roman specifications—take hours in person but weeks via email. Being on-site enables rapid consultation with Roman team members on instrumental specifics and mission timeline constraints critical for delivering usable forecasts before Roman survey data release.
+**Why In-Person is Non-Negotiable:**
+Mission instrument development and survey forecasting require rapid iteration impossible via email. Model architecture decisions, loss function adjustments, and Roman specification updates must be discussed face-to-face with Dr. Hemmati and mission team members. Quick decisions that take hours in person require weeks remotely. Being embedded at IPAC ensures our methodology remains aligned with evolving mission requirements and delivers actionable forecasts before Roman survey data release.
 
 **Career and Research Impact:**
-Working embedded in IPAC's mission operations environment provides irreplaceable training for my goal of pursuing research and mission support roles at institutions like STScI. This fellowship directly accelerates all four research projects toward publication and delivery of mission-ready software.
+Working directly with a mission scientist accelerates research quality and prepares me for future roles combining research with mission operations at institutions like STScI.
 
 ---
 
