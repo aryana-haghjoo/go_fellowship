@@ -2,19 +2,23 @@
 
 ## Off-Campus Work Justification (300 words)
 
-The proposed research requires sustained in-person collaboration at IPAC (Infrared Processing and Analysis Center, Caltech) with Dr. Shoubaneh Hemmati on the development of deep learning methods for spectral super-resolution using data from the James Webb Space Telescope and the upcoming Nancy Grace Roman Space Telescope. While we have made substantial progress through remote collaboration, this research fundamentally benefits from working side by side.
+The proposed research is a multi-faceted, mission-critical project that integrates four complementary research components: two spectral super-resolution projects (generative model development and benchmarking against classical methods), Roman Space Telescope grism adaptation, and Lyman-alpha physics inference. This integrated scope requires sustained, intensive in-person collaboration at IPAC with Dr. Shoubaneh Hemmati and direct engagement with the Roman mission team—impossible to achieve remotely.
 
-**Unique Resources and Environment:**
-IPAC provides an unparalleled research environment for this project. As the data archive and analysis center for multiple NASA infrared missions, IPAC offers direct access to JWST and Roman mission specialists, computational infrastructure optimized for large-scale spectral data processing, and collaborators working on related survey activities (COSMOS-Web, JADES). Being on-site facilitates rapid consultation with these experts on mission-specific details and data characteristics that are crucial for developing robust deep learning frameworks.
+**Why IPAC is Essential:**
+IPAC is the only location where all necessary resources and expertise converge. As the Infrared Processing and Analysis Center and Roman mission operations hub, IPAC provides: (1) direct access to Roman team members responsible for grism design, calibration, and survey planning; (2) computational infrastructure optimized for JWST and Roman spectral data processing; (3) collaborators on related surveys (JADES, COSMOS-Web) with mission data and expertise. Remote collaboration cannot provide the in-person contact with the Roman team that this project demands.
 
-**Research Activities at IPAC:**
-During the fellowship, I will: (1) conduct in-person model development and iterative validation with Dr. Hemmati, comparing deep learning approaches against classical methods; (2) access IPAC's high-performance computing resources for training and inference on JWST spectral data; (3) collaborate directly with mission specialists to ensure our methods are tailored to instrumental characteristics and future Roman grism observations; (4) participate in IPAC's research seminars and workshops to integrate feedback from the broader spectroscopy community.
+**Integrated Research Activities:**
+The four project components require coordinated development: 
+- **Super-resolution models (JWST):** In-person iteration with Dr. Hemmati on physics-informed loss functions and validation against held-out JADES data
+- **Classical benchmarking:** Real-time comparison of deep learning vs. traditional deconvolution methods
+- **Roman adaptation:** Direct collaboration with IPAC's Roman team to integrate mission-specific instrument characteristics (detector properties, wavelength coverage, grism response) into our framework
+- **Lyman-alpha inference:** Working with mission specialists to ensure our recovered spectral features enable physical parameter estimation
 
-**Why In-Person Matters:**
-Many aspects of this project benefit significantly from in-person meetings. Real-time interpretation of complex model outputs, troubleshooting of training challenges, and rapid iteration on physics-informed loss functions would otherwise require numerous virtual meetings spread over several days. Being on-site allows us to make decisions within hours that would otherwise take weeks. This immersive collaboration will accelerate project progress, improve research quality, and strengthen its potential impact on future spectroscopic surveys.
+**Why In-Person Collaboration is Non-Negotiable:**
+Troubleshooting model failures, interpreting complex spectral results, and iterating on Roman-specific adaptations require immediate feedback and real-time interaction. Quick decisions during model development—changing loss functions, adjusting architectures based on Roman specifications—take hours in person but weeks via email. Being on-site enables rapid consultation with Roman team members on instrumental specifics and mission timeline constraints critical for delivering usable forecasts before Roman survey data release.
 
-**Career Goals Alignment:**
-This fellowship directly supports my career goal of pursuing research in academia and mission science. Working at IPAC provides invaluable exposure to mission operations, archival data management, and collaborative research within a world-class astrophysics center—experience essential for future positions at research institutions and mission support centers like STScI.
+**Career and Research Impact:**
+Working embedded in IPAC's mission operations environment provides irreplaceable training for my goal of pursuing research and mission support roles at institutions like STScI. This fellowship directly accelerates all four research projects toward publication and delivery of mission-ready software.
 
 ---
 
