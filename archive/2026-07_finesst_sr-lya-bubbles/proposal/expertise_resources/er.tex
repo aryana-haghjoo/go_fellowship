@@ -1,0 +1,269 @@
+% =====================================================================
+% FINESST-25 — FILE 2: "EXPERTISE AND RESOURCES — NOT ANONYMIZED"
+% Full draft. Real names REQUIRED here.
+% RRS <= 1 page. Acknowledgement <= 150 words.
+% After compiling: append the four PDFs exported from the NASA docx
+% templates (biosketches + C&P for PI and FI) — see drafts in
+% ../accompanying/.
+% =====================================================================
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\begin{document}
+
+\begin{center}{\large\bfseries Expertise and Resources --- Not Anonymized}\\[3pt]
+{\itshape Mapping Reionization-Era Ionized Bubbles by Recovering
+Lyman-$\alpha$ Information from Low-Resolution JWST and Roman
+Spectroscopy}
+\end{center}
+
+% ---- (a) team list — must be page 1 ----
+\section*{1. Team Members, Affiliations, and Roles}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Name & Affiliation & Role \\
+\midrule
+Prof.\ Bahram Mobasher & University of California, Riverside & PI \\
+Aryana Haghjoo & University of California, Riverside & FI (PhD student) \\
+Dr.\ Shoubaneh Hemmati & IPAC, California Institute of Technology & Collaborator (Mentor 1) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{2. Team Expertise and Responsibilities}
+
+\textbf{Aryana Haghjoo (FI)} developed the physics-informed spectral
+super-resolution framework at the core of this proposal and is first
+author of the paper presenting it (Haghjoo et al.\ 2026,
+arXiv:2603.18357, submitted to ApJ). The FI also built the end-to-end
+Roman grism simulation pipeline (extraction, contamination modeling,
+training-set generation from the Wang et al.\ 2022 IRSA products) and the
+Lyman-$\alpha$ mock-spectrum pipeline used in Task 2. The FI's M.Sc.\
+research (McGill University) on parameter estimation of the global 21\,cm
+signal provides direct background in Epoch-of-Reionization physics and
+Bayesian inference. The FI will carry out all proposed research and lead
+all publications.
+
+\textbf{Prof.\ Bahram Mobasher (PI)} is a Distinguished Professor at the
+University of California, Riverside, with over three decades of
+experience in galaxy evolution, deep multiwavelength surveys,
+photometric-redshift and SED-fitting methodology, and space-based survey
+science (HST, Spitzer, JWST, Euclid, Roman preparation). The PI
+supervises the FI's PhD thesis, directs the overall research program,
+and mentors the FI in survey science and scientific writing.
+
+\textbf{Dr.\ Shoubaneh Hemmati (Collaborator, Mentor 1)} is a Research
+Scientist at IPAC/Caltech specializing in machine-learning methods for
+galaxy surveys and spectroscopy; co-developer of the super-resolution
+framework (second author of Haghjoo et al.\ 2026). Dr.\ Hemmati advises
+on model architecture, validation methodology, and Roman survey
+spectroscopy, and co-mentors the FI (weekly meetings, plus in-person
+working sessions at IPAC approximately every two weeks).
+
+\section*{3. Summary of Work Effort}
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Name (role) & Contribution & Effort \\
+\midrule
+Aryana Haghjoo (FI) & All analysis, pipelines, publications & 1.0 FTE \\
+Bahram Mobasher (PI) & Thesis supervision, survey science guidance & no cost requested \\
+Shoubaneh Hemmati (Mentor 1) & ML methodology co-mentoring & no cost requested \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{4. Facilities, Equipment, and Other Resources}
+
+\textbf{Computing.} The PI's research group at UCR operates a dedicated
+GPU system equipped with an NVIDIA GeForce RTX 5090 (32~GB), supplemented
+by the University of California, Riverside High Performance Computing
+Center (HPCC), which provides shared GPU nodes and multi-TB project
+storage. Model training for this project ($\sim$2.5M-parameter networks,
+datasets $\lesssim$10 GB) is well within these resources; no NASA HEC
+allocation is required.
+
+\textbf{Data access.} All observational inputs are public: JWST/NIRSpec
+JADES data releases (MAST) and Roman grism simulation products (Wang et
+al.\ 2022; IRSA). No letters of resource support are required for these
+public archives.
+
+\textbf{Simulations.} Radiative-transfer post-processed hydrodynamic
+simulations of patchy reionization (Lyman-$\alpha$ transmission
+sightlines with matched ionization cubes) are provided through an
+ongoing collaboration with Prof.\ Anson D'Aloisio (UC Riverside); the
+FI already holds the simulation data and has built the training-label
+pipeline on them, so continued access is assured and no letter of
+resource support is required. Public simulation suites (THESAN,
+SPHINX$_{20}$) provide independent training sets.
+
+% ---- RRS — FI-authored, MAX 1 PAGE ----
+\clearpage
+\section*{5. Research Readiness Statement (Future Investigator)}
+
+I am a PhD student in Astronomy at the University of California,
+Riverside (enrolled since September 2024 in the M.Sc./Ph.D.\ track;
+Ph.D.\ program since September 2025), with expected graduation in June
+2030 --- fully spanning the proposed three-year award. My path to this
+project combines the three ingredients it requires: reionization physics,
+machine-learning methodology, and space-based spectroscopy.
+
+\emph{Reionization and statistical inference.} My M.Sc.\ in Physics at
+McGill University (2021--2023) was devoted to the Epoch of Reionization:
+I built an MCMC parameter-estimation pipeline for the global 21\,cm
+signal using ARES simulations and EDGES data, giving me a working
+foundation in EoR astrophysics and Bayesian inference --- the physics and
+statistics underlying Tasks 1 and 2.
+
+\emph{Machine learning for spectroscopy.} I am first author of
+``Learning to See Sharper: A Physics-Informed Artificial Intelligence
+Framework for Super-Resolving Galaxy Spectra'' (arXiv:2603.18357,
+submitted to ApJ), the framework at the center of this proposal: I
+designed the architecture, training strategy, and validation
+methodology, trained it on 1,187 JADES prism--grating pairs, and released
+the code and checkpoints publicly. I have since ported the framework to
+simulated Roman grism data, building the full extraction and
+training pipeline (17,000+ spectral pairs to date) and the
+prior-dominance audit described in the S/T/M. My ML background began with
+undergraduate research on variable-star classification and coursework in
+machine learning for physics; my current graduate coursework includes
+galaxy formation, advanced cosmology, radiative processes, and
+observational astrophysics.
+
+\emph{Observational experience.} I work with JWST/NIRSpec data daily
+(JADES DR3/DR4); I am a Co-I of an accepted JWST Cycle 5 GO program
+(NIRSpec/IFU observations of extremely luminous $z\sim9$ galaxies,
+unfunded role); and I have contributed to spectroscopic catalog
+construction from Keck data for the H2O survey. I have presented this research program at ten venues
+since mid-2025, including invited talks at the CfA AstroAI seminar and
+the Euclid US science meeting.
+
+I am proficient in Python/PyTorch, high-performance computing (SLURM),
+and collaborative software development, and have prototyped every
+pipeline this proposal requires: the mock Lyman-$\alpha$ generation
+(Task 1), the bubble-size training-label extraction from
+radiative-transfer cubes (Task 2), and the Roman injection machinery
+(Task 3). The proposed research is the natural integration of these
+components into a single measurement, and I am prepared to execute it.
+
+% ---- Acknowledgement — MAX 150 WORDS ----
+\clearpage
+\section*{6. Acknowledgement of Authorship}
+
+I, Aryana Haghjoo, affirm that I am the primary author of this proposal.
+I defined the scientific objectives, designed the technical approach,
+and wrote the Science/Technical/Management section, the Open Science and
+Data Management Plan, and this Expertise and Resources document. The
+mentoring plan was prepared jointly with the PI, Prof.\ Bahram Mobasher,
+and collaborator Dr.\ Shoubaneh Hemmati, who also provided scientific
+feedback on the research plan. The proposed research builds on my
+first-author work developing the spectral super-resolution framework and
+represents my own initiative in extending it to reionization science.
+Portions of the text, \LaTeX, and figure-production code were drafted
+and revised with the assistance of a generative AI tool (Claude,
+Anthropic, June--July 2026) under my direction; all scientific ideas,
+methods, and conclusions are my own, and I take full responsibility for
+the accuracy of the entire proposal.
+
+% ---- Budget ----
+\section*{7. Budget and Budget Narrative}
+
+% Structure agreed with the PI (2026-07-07): salary first (GSR-1 summer
+% 2027, GSR-3 after advancement to candidacy), remainder to tuition;
+% travel $1,500/yr; no publication charges in Year 1; UCR treats FINESST
+% FIs as fellowship holders (no F&A). Cap: $50,000/year TOTAL.
+
+\subsection*{Period of performance}
+Three years, 1 June 2027 -- 31 May 2030, beginning with the Summer 2027
+quarter. (The solicitation requires a start date no later than 14 July
+2027; June 1, 2027 satisfies this and covers the full summer quarter.)
+
+\subsection*{Year 1 (June 2027 -- May 2028)}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Item & Amount \\
+\midrule
+FI stipend --- Summer 2027 quarter: UC GSR Step 1, 50\% appointment
+  (3 mo $\times$ \$2,995.63) & \$8,987 \\
+FI stipend --- Fall--Spring: UC GSR Step 3 upon advancement to
+  candidacy, 50\% (9 mo $\times$ \$3,477.96) & \$31,302 \\
+Domestic travel (AAS or one topical workshop) & \$1,500 \\
+Tuition and fee contribution & \$8,211 \\
+\midrule
+Total Year 1 (fellowship classification; no F\&A) & \$50,000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Years 2 and 3 (each)}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Item & Amount \\
+\midrule
+FI stipend --- 12 months at UC GSR Step 3, 50\%
+  (12 mo $\times$ \$3,477.96) & \$41,736 \\
+Domestic travel & \$1,500 \\
+Publication charges (open access, 1 paper/yr) & \$2,000 \\
+Tuition and fee contribution & \$4,764 \\
+\midrule
+Total per year & \$50,000 \\
+Three-year total & \$150,000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Narrative}
+The requested funds support the FI only; no salary, travel, or other
+costs are requested for the PI or collaborators, per the solicitation.
+The University of California, Riverside administers FINESST awardees as
+fellowship holders; accordingly no facilities and administrative costs
+are assessed and the full annual amount supports the FI directly.
+
+The budget prioritizes the FI's stipend so that the FI is released from
+teaching duties for the entire award period. Stipend amounts follow the
+published University of California Graduate Student Researcher salary
+scale (UCOP Table 22, rates effective 10/1/2025: Step 1
+\$5,991.25/month, Step 3 \$6,955.92/month, full-time equivalent) at a
+50\% appointment (20 hours per week) --- the maximum employment level
+for the FI as an international student and the standard UC graduate
+appointment: Step 1 during the Summer 2027 quarter and Step 3 from Fall
+2027 onward, reflecting the FI's advancement to Ph.D.\ candidacy. Should the UC salary scale be adjusted
+during the award period, the stipend will follow the prevailing scale
+and the tuition contribution line will absorb the difference within the
+annual cap.
+
+The remaining annual amount contributes toward tuition and fees. Per the
+University of California 2025--26 fee schedule, graduate academic
+tuition and the student services fee total \$4,810 per quarter (three
+quarters per year; the summer quarter carries no tuition), plus
+campus-based fees and health insurance; nonresident supplemental tuition
+(\$5,034 per quarter) is assessed only until advancement to candidacy,
+after which it is \$0 for the duration of the award. The balance of
+tuition and fees not covered by this award is paid from the PI's
+research funds --- a committed cost share that ensures the project is
+fully resourced within the FINESST annual cap.
+
+Travel (\$1,500 per year) supports presentation of results at one
+national meeting (e.g., AAS) or one topical workshop per year. The FI's
+regular in-person working sessions with Dr.\ Hemmati at IPAC involve
+only local travel and require no budgeted funds. Publication charges
+(\$2,000 in Years 2 and 3 only) cover one open-access article per year,
+matching the publication schedule in the S/T/M: the Year-1 methods paper
+is expected to reach publication charges in Year 2, followed by the
+flagship measurement and Roman forecast papers.
+
+% =====================================================================
+% APPEND (exported to PDF from ../accompanying/ drafts + NASA docx):
+%   biosketch_PI.pdf, biosketch_FI.pdf, [optional: Hemmati as mentor],
+%   CP_PI.pdf, CP_FI.pdf
+% NO transcripts, NO recommendation letters.
+% =====================================================================
+
+\end{document}
