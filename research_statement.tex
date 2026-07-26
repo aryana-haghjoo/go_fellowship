@@ -1,15 +1,14 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.9in]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{amssymb}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
-\renewcommand{\baselinestretch}{1.15}
+\setlength{\parskip}{3pt}
+\renewcommand{\baselinestretch}{0.95}
 
-\title{\textbf{Deep Learning for Galaxy Spectral Super-Resolution: Unlocking Physics from Low-Resolution JWST and Roman Space Telescope Data}}
+\title{\textbf{Deep Learning for Galaxy Spectral Super-Resolution}}
 \author{Aryana Haghjoo}
 \date{}
 
@@ -19,43 +18,21 @@
 
 \vspace{-0.4cm}
 
-\section*{Scientific Motivation}
+Low-resolution spectroscopy from JWST and the Nancy Grace Roman Space Telescope can observe large galaxy samples, but spectral features encoding key physics are blurred below instrumental resolution. I develop physics-informed deep learning frameworks that super-resolve low-resolution spectra by $\sim 10\times$, recovering hidden astrophysical information.
 
-Modern space telescopes like JWST and the upcoming Nancy Grace Roman Space Telescope can observe galaxies at cosmic noon and into the epoch of reionization, revealing how galaxies formed and evolved in the early universe. However, obtaining high-resolution spectroscopy for large galaxy samples is challenging: the most efficient spectroscopic modes---such as JWST's NIRSpec prism (spectral resolution $R \sim 100$) and Roman's grism---operate at low spectral resolution. This limitation makes it difficult to measure key astrophysical diagnostics encoded in galaxy spectra. For example, the shapes of emission lines like Lyman-alpha encode information about the physical environment around galaxies, but at low resolution, these features are blurred below the instrumental resolution, rendering them invisible.
-
-\section*{Research Goals}
-
-My research develops a physics-informed deep learning framework that ``super-resolves'' low-resolution galaxy spectra by a factor of $\sim 10$ in resolution. Using paired spectroscopic observations from JWST's public JADES survey---where the same galaxies were observed in both high-resolution grating mode and low-resolution prism mode---I train generative models with a physics-informed loss function that explicitly targets the accuracy of emission line ratios (e.g., $H\alpha/H\beta$) and line profiles crucial for astrophysical inference.
-
-The overarching goal is to recover physically meaningful information from low-resolution spectra so that statistical measurements---previously limited to the brightest galaxies observable in high-resolution mode---can be extended to the much larger samples available at low resolution. This enables transformative science: measuring galaxy properties, constraining reionization history, and probing the environments of distant galaxies using data that would otherwise be scientifically limited.
-
-\section*{Key Innovation}
+Using paired JWST/NIRSpec observations from the public JADES survey (same galaxies in high-resolution grating and low-resolution prism modes), I train generative models with physics-informed loss functions targeting emission line accuracy. Figure 1(a) demonstrates super-resolution on a $z=7.43$ galaxy, recovering spectral features invisible in prism data. Figure 1(b) shows the astrophysical impact: Lyman-alpha profiles depend sensitively on ionized bubble size ($R_b$). High-resolution profiles are distinguishable; prism-resolution profiles appear identical. Our method recovers this information, enabling physical measurements from low-resolution data.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.95\textwidth]{figure1.pdf}
+\vspace{-0.3cm}
 \end{figure}
 
-Figure 1 illustrates the core innovation. Panel (a) shows JWST/NIRSpec spectroscopy of a $z = 7.43$ galaxy: the black line is the true high-resolution grating spectrum, the gray line is the blurred prism-resolution version (what astronomers measure), and the orange line is our super-resolved prediction from the prism data. Our model recovers spectral features that would otherwise be invisible. Panel (b) demonstrates the astrophysical impact: the Lyman-alpha line profile depends sensitively on the size of the ionized bubble around the galaxy ($R_b$, color-coded). At high resolution (left), these profiles are clearly distinguishable. At prism resolution (right), they appear nearly identical---information is lost. Our super-resolution method recovers this information, enabling physical measurements from low-resolution data.
+\vspace{-0.15cm}
 
-\vspace{0.5cm}
+\noindent
+\textbf{Summer 2027 at IPAC:} In-person collaboration with Dr. Hemmati is essential. The fellowship will enable: (1) systematic validation of astrophysical diagnostic recovery using held-out JADES observations; (2) adaptation to Roman grism spectroscopy with IPAC's mission team; (3) development of multi-modal models integrating photometric and spectroscopic data. Direct access to IPAC's computational resources, mission specialists, and collaborators on related surveys accelerates model iteration and ensures our methodology leverages mission-specific characteristics. This immersive environment will significantly advance both research progress and quality compared to remote collaboration.
 
-\section*{Research Plan for Summer 2027}
-
-During the Graduate Off-Campus Fellowship at IPAC (June--August 2027), I will:
-
-\begin{enumerate}
-\item \textbf{Validate recovery of astrophysical diagnostics:} Systematically test which galaxy properties (star formation rates, dust attenuation, emission line diagnostics) can be reliably inferred from super-resolved spectra. Use held-out JADES observations and controlled mock experiments to establish recovery limits and uncertainties.
-
-\item \textbf{Extend to Roman grism spectroscopy:} Adapt the framework to Roman's grism mode, integrating mission-specific characteristics (detector properties, wavelength coverage) in collaboration with IPAC's Roman team. Produce completeness and recovery forecasts so the method can be applied to Roman survey data immediately upon release.
-
-\item \textbf{Multi-modal foundation model development:} Integrate photometric and spectroscopic information into a unified framework, enabling joint inference across wavelengths---a methodology critical for survey-scale applications where spectroscopy is sparse.
-\end{enumerate}
-
-This work directly supports my dissertation, produces open-source software and pre-trained models for the community, and develops methodology transferable to other spectroscopic surveys with future missions.
-
-\section*{Broader Impact}
-
-Beyond advancing our understanding of galaxy evolution, this research demonstrates how machine learning can extract maximum scientific value from observational data---a principle applicable across astronomy and beyond. The code and models will be released publicly, enabling other researchers to apply super-resolution to their own spectroscopic datasets, extending the science reach of JWST, Roman, and future missions.
+The work advances my dissertation, produces open-source software and trained models, and develops transferable methodology for future spectroscopic surveys.
 
 \end{document}
