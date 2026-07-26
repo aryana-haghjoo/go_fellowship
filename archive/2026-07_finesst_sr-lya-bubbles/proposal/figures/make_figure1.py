@@ -124,9 +124,10 @@ ax_a.fill_between(
     (r["sr2_mean"][i] + r["sr2_sigma"][i])[m],
     color=C_SR, alpha=0.22, lw=0, zorder=1,
 )
-for rest, name, dx in [(0.486135, r"H$\beta$", 0),
-                       (0.495890, "", 0),
-                       (0.500680, r"[O III]$\lambda\lambda$4959,5007", 0.004)]:
+# vacuum rest wavelengths (JWST spectra are on a vacuum wavelength scale)
+for rest, name, dx in [(0.4862683, r"H$\beta$", 0),
+                       (0.4960295, "", 0),
+                       (0.5008240, r"[O III]$\lambda\lambda$4959,5007", 0.004)]:
     lam = rest * (1 + z)
     ax_a.axvline(lam, color="0.75", ls=":", lw=1.1, zorder=0)
     if name:
