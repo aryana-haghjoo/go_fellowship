@@ -2,43 +2,36 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,epsfig,url}
 \usepackage[numbers]{natbib}
-
+\usepackage{hyperref}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{3pt}
 \renewcommand{\baselinestretch}{0.96}
 
-\bibliographystyle{plain}
+\bibliographystyle{aasjournal}
 
-\title{\textbf{Deep Learning for Galaxy Spectral Super-Resolution}}
-\author{Aryana Haghjoo}
-\date{}
-
+\title{Learning to See Sharper:\\ A Physics-Informed Artificial Intelligence Framework for Super-Resolving Galaxy Spectra}
+\date{} 
 \begin{document}
-
 \maketitle
+\vspace{-2cm}
 
-\vspace{-0.4cm}
+The scientific information recoverable from galaxy spectra is fundamentally limited by spectral resolution. High-resolution spectroscopy enables precise redshift measurements for cosmology and reveals key galaxy properties, including star-formation rates, gas-phase metallicity, and active galactic nucleus activity. However, many important emission lines become blended in low-resolution spectra, introducing systematic uncertainties that limit both galaxy evolution studies and cosmological analyses (\citealt{Hemmati2019, DESI2025, Shivaei2020,Khostovan2024}).
 
-Modern infrared telescopes like JWST and Nancy Grace Roman enable cosmic observations \citep{gardner2023}, but efficient spectroscopic modes operate at low resolution: JWST's NIRSpec prism ($R \sim 100$) \citep{jakobsen2022} and Roman's grism. Spectral features encoding critical physics blur below instrumental limits. I develop physics-informed deep learning frameworks that super-resolve low-resolution galaxy spectra by $\sim 10\times$, recovering hidden astrophysical information \citep{haghjoo2026}.
+Current facilities each face a trade-off between spectral resolution, survey area, and depth. Large space missions such as \textit{Euclid} (\citealt{euclid}) and the forthcoming \textit{Roman Space Telescope} (\citealt{roman_1, roman_2}) observe vast numbers of distant galaxies using low-resolution spectroscopy. In contrast, the \textit{James Webb Space Telescope} (JWST; \citealt{jwst}) delivers exceptional spectral resolution but only over small fields of view. 
 
-Using paired JWST/NIRSpec observations from JADES \citep{jades_overview} (same galaxies in high-resolution and prism modes), I train generative models with physics-informed loss functions \citep{ledig2017, vaswani2017, he2016}. Figure 1(a) demonstrates super-resolution on a $z=7.43$ galaxy, recovering features invisible in prism data. Figure 1(b) shows the astrophysical impact: Lyman-alpha profiles encode ionized bubble sizes ($R_b$) around galaxies. High-resolution profiles are distinguishable; prism-resolution profiles appear identical. Our method recovers this hidden information, enabling physical measurements from scientifically limited data.
+My research addresses this challenge by developing deep-learning methods that reconstruct higher-resolution spectra from low-resolution observations. Using paired spectra from the \textit{JWST Advanced Deep Extragalactic Survey} (JADES; \citealt{jades_overview}), where low-resolution prism observations are matched with medium-resolution grating spectra of the same galaxies, I train neural networks to recover diagnostic spectral features that would otherwise remain unresolved (\citealt{haghjoo2026}).
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.90\textwidth]{figure1.pdf}
-\vspace{-0.3cm}
-\end{figure}
+We then extend this framework to enhance the scientific return of simulated spectra expected from the future \textit{Roman Space Telescope}, enabling more accurate galaxy property measurements and improved cosmological constraints from millions of galaxies.
 
-\noindent
-\textbf{Summer 2027 at IPAC:} The fellowship focuses on three integrated components: (1) validating recovery of astrophysical diagnostics using held-out JADES data, comparing deep learning against classical deconvolution methods \citep{lucy1974, richardson1972, scourfield2023}; (2) adapting the framework to Roman grism with IPAC's mission team, incorporating photometry to aid redshift prediction; (3) extending to Euclid spectroscopy. Timing is critical: Roman's first data release is expected Summer 2027. On-site access to real mission data and Dr. Shoubaneh Hemmati—active member of Euclid and Roman missions—enables immediate validation impossible remotely. In-person collaboration ensures our methodology aligns with mission requirements and delivers forecasts to inform survey strategy.
 
-This work advances galaxy astrophysics while demonstrating how machine learning extracts maximum value from observational data \citep{schawinski2017, fabbro2018}. All products---code, trained models, and super-resolved spectra---will be publicly released with proper documentation for community use, extending the science reach of JWST, Roman, Euclid, and future missions.
+\textbf{Summer 2027 at Infrared Processing and Analysis Center (IPAC):}
 
-\vspace{0.2cm}
-\footnotesize
-\nocite{*}
+During my time at IPAC, I will focus on four components: (1) Exploring and measuring the effect of super-resolving galaxy spectra on the performance of down stream science tasks including galaxy diagnostics; (2) Comparing our developed technique against classical deconvolution methods \citep{lucy1974, richardson1972, scourfield2023}; (3) Incorporating the framework in the official NASA-approved space telescope's software pipeline; (4) Adapting the framework to Roman grism with IPAC's mission team, incorporating photometry to aid redshift prediction. Timing is critical: Roman's first data release is expected Summer 2027. On-site access to mission data and Dr. Shoubaneh Hemmati (research scientist of Euclid and Roman missions) enables immediate validation impossible remotely. In-person collaboration ensures our methodology aligns with mission requirements and goals.
+
+This work advances galaxy evolution studies in astrophysics while demonstrating how machine learning extracts maximum value from observational data \citep{schawinski2017, fabbro2018}. All products (e.g., code, trained models, and super-resolved spectra) will be publicly released with proper documentation for community use, extending the science reach of JWST, Roman, Euclid, and future missions.
+
 \bibliography{references}
 
 \end{document}
